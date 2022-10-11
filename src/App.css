@@ -134,10 +134,11 @@ main {
   margin: 1.2rem;
   box-shadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
   transition: all 0.3s linear;
-  display: grid;
-  grid-template-rows: auto 1fr;
+  display: flex;
+  flex-direction: column;
   border-radius: 0.25rem;
-  width: 35%;
+  width: 90%;
+  min-width: 200px;
 }
 .post-card h1,
 p {
@@ -157,4 +158,16 @@ p {
   letter-spacing: 0.1rem;
   margin-bottom: 0.3rem;
   color: #afafaf;
+}
+
+@media (min-width: 768px) {
+  .post-card {
+    width: 70%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .post-card {
+    width: 50%;
+  }
 }
