@@ -83,7 +83,7 @@ const Post = (props: Props) => {
   }, [])
 
   return (
-    <section>
+    <article className='post-card'>
       <div className='title'>
         <h1>{post.title}</h1>
       </div>
@@ -92,12 +92,12 @@ const Post = (props: Props) => {
       </div>
       <div className='footer'>
         <p>@{post.username}</p>
-        <button onClick={isLiked ? removeLike : addLike}>
+        <button className='like-btn' onClick={isLiked ? removeLike : addLike}>
           {isLiked ? <>&#128078;</> : <>&#128077;</>}
         </button>
         {likes && <p> Likes: {likes?.length}</p>}
       </div>
-    </section>
+    </article>
   )
 }
 

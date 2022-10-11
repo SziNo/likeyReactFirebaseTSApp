@@ -25,7 +25,7 @@ const Navbar = () => {
             {/* <p>{auth.currentUser?.displayName}</p> */}
             <p>{user?.displayName}</p>
             <img src={user?.photoURL || ''} width='35' height='35' />
-            <button className='logout' onClick={signUserOut}>
+            <button className='logout-btn' onClick={signUserOut}>
               Log Out
             </button>
           </>
