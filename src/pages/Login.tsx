@@ -11,12 +11,12 @@ const Login = () => {
   }
 
   return (
-    <div>
+    <section className='login'>
       <p>Sign In With Google To Continue </p>
       <button className='login-btn' onClick={signInWithGoogle}>
         Sign In With Google
       </button>
-    </div>
+    </section>
   )
 }
 
