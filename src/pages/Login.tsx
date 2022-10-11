@@ -12,7 +12,15 @@ const Login = () => {
 
   return (
     <section className='login'>
-      <p>Sign In With Google To Continue </p>
+      <p
+        style={{
+          fontSize: '24px',
+          color: '#6d03dd',
+          marginBottom: '1rem',
+        }}
+      >
+        Sign In With Google To Continue:
+      </p>
       <button className='login-btn' onClick={signInWithGoogle}>
         Sign In With Google
       </button>
