@@ -10,6 +10,16 @@ const Navbar = () => {
 
   return (
     <nav className='navbar'>
+      <div className='user'>
+        {user && (
+          <>
+            {/* <p>{auth.currentUser?.displayName}</p> */}
+            <p>{user?.displayName}</p>
+            <img src={user?.photoURL || ''} width='35' height='35' />
+          </>
+        )}
+      </div>
+
       <div className='links'>
         <Link to='/'> Home </Link>
         {!user ? (
@@ -19,17 +29,10 @@ const Navbar = () => {
         )}
       </div>
 
-      <div className='user'>
-        {user && (
-          <>
-            {/* <p>{auth.currentUser?.displayName}</p> */}
-            <p>{user?.displayName}</p>
-            <img src={user?.photoURL || ''} width='35' height='35' />
-            <button className='logout-btn' onClick={signUserOut}>
-              Log Out
-            </button>
-          </>
-        )}
+      <div className='btn-container'>
+        <button className='logout-btn' onClick={signUserOut}>
+          Log Out
+        </button>
       </div>
     </nav>
   )
