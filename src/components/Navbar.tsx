@@ -30,9 +30,11 @@ const Navbar = () => {
       </div>
 
       <div className='btn-container'>
-        <button className='logout-btn' onClick={signUserOut}>
-          Log Out
-        </button>
+        {user && (
+          <button className='logout-btn' onClick={signUserOut}>
+            Log Out
+          </button>
+        )}
       </div>
     </nav>
   )
